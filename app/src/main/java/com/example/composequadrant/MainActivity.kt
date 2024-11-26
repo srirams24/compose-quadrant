@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -40,12 +41,37 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ComposeQuadrant(modifier: Modifier = Modifier) {
-    ComposableCard(
-        title = stringResource(R.string.card1_title_text),
-        description = stringResource(R.string.card1_description_text),
-        modifier = Modifier
-            .background(color = colorResource(R.color.card1_color))
-    )
+
+    Row {
+        ComposableCard(
+            title = stringResource(R.string.card1_title_text),
+            description = stringResource(R.string.card1_description_text),
+            modifier = Modifier
+                .background(color = colorResource(R.color.card1_color))
+                .weight(1F)
+                .fillMaxSize()
+        )
+        ComposableCard(
+            title = stringResource(R.string.card2_title_text),
+            description = stringResource(R.string.card2_description_text),
+            modifier = Modifier
+                .background(color = colorResource(R.color.card2_color))
+                .weight(1F)
+                .fillMaxSize()
+        )
+    }
+//    ComposableCard(
+//        title = stringResource(R.string.card3_title_text),
+//        description = stringResource(R.string.card3_description_text),
+//        modifier = Modifier
+//            .background(color = colorResource(R.color.card3_color))
+//    )
+//    ComposableCard(
+//        title = stringResource(R.string.card4_title_text),
+//        description = stringResource(R.string.card4_description_text),
+//        modifier = Modifier
+//            .background(color = colorResource(R.color.card4_color))
+//    )
 }
 
 @Composable
