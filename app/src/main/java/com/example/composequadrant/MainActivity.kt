@@ -42,36 +42,44 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ComposeQuadrant(modifier: Modifier = Modifier) {
 
+//    Row {
+//        ComposableCard(
+//            title = stringResource(R.string.card1_title_text),
+//            description = stringResource(R.string.card1_description_text),
+//            modifier = Modifier
+//                .background(color = colorResource(R.color.card1_color))
+//                .weight(1F)
+//                .fillMaxSize()
+//        )
+//        ComposableCard(
+//            title = stringResource(R.string.card2_title_text),
+//            description = stringResource(R.string.card2_description_text),
+//            modifier = Modifier
+//                .background(color = colorResource(R.color.card2_color))
+//                .weight(1F)
+//                .fillMaxSize()
+//        )
+//    }
+
+
     Row {
         ComposableCard(
-            title = stringResource(R.string.card1_title_text),
-            description = stringResource(R.string.card1_description_text),
+            title = stringResource(R.string.card3_title_text),
+            description = stringResource(R.string.card3_description_text),
             modifier = Modifier
-                .background(color = colorResource(R.color.card1_color))
+                .background(color = colorResource(R.color.card3_color))
                 .weight(1F)
                 .fillMaxSize()
         )
         ComposableCard(
-            title = stringResource(R.string.card2_title_text),
-            description = stringResource(R.string.card2_description_text),
+            title = stringResource(R.string.card4_title_text),
+            description = stringResource(R.string.card4_description_text),
             modifier = Modifier
-                .background(color = colorResource(R.color.card2_color))
+                .background(color = colorResource(R.color.card4_color))
                 .weight(1F)
                 .fillMaxSize()
         )
     }
-//    ComposableCard(
-//        title = stringResource(R.string.card3_title_text),
-//        description = stringResource(R.string.card3_description_text),
-//        modifier = Modifier
-//            .background(color = colorResource(R.color.card3_color))
-//    )
-//    ComposableCard(
-//        title = stringResource(R.string.card4_title_text),
-//        description = stringResource(R.string.card4_description_text),
-//        modifier = Modifier
-//            .background(color = colorResource(R.color.card4_color))
-//    )
 }
 
 @Composable
@@ -79,15 +87,13 @@ fun ComposableCard(title: String, description: String, modifier: Modifier = Modi
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier
-            .padding(16.dp)
+        modifier = modifier.padding(16.dp)
     ) {
         Text(
             text = title, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 16.dp)
         )
         Text(
-            text = description,
-            textAlign = TextAlign.Justify
+            text = description, textAlign = TextAlign.Justify
         )
     }
 }
